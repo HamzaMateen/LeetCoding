@@ -17,8 +17,10 @@ public:
     for (; tempHead != nullptr; tempHead = tempHead->next)
       digitCount += 1;
 
+    tempHead = head;
     for (int i = digitCount - 1; i >= 0; i--) {
-      decimalValue += pow()
+      decimalValue += pow(2, i) * tempHead->val;
+      tempHead = tempHead->next;
     }
 
     return decimalValue;
